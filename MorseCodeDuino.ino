@@ -145,80 +145,119 @@ void morseCodeGen(char letter)
 
     // n = l s
     case 'n':
-      
+      mLong();
+      mShort();
       break;
 
     // o = l l l 
     case 'o':
-
+      mLong();
+      mLong();
+      mLong();
 
       delay(400);
       break;
 
     // p = s l l s
     case 'p':
-
-
+      mShort();
+      mLong();
+      mLong();
+      mShort();
+      
       delay(400);
       break;
 
     // q = l l s l 
     case 'q':
-
+      mLong();
+      mLong();
+      mShort();
+      mLong();
+      
       delay(400);
       break;
 
     // r = s l s
     case 'r':
-
+      mShort();
+      mLong();
+      mShort();
+      
       delay(400);
       break;
 
     // s = s s s
     case 's':
-
+      mShort();
+      mShort();
+      mShort();
+      
       delay(400);
       break;
 
     // t = l
     case 't':
-
+      mLong();
+      
       delay(400);
       break;
 
     // u = s s l
     case 'u':
-
+      mShort();
+      mShort();
+      mLong();
+      
       delay(400);
       break;
 
     // v = s s s l
     case 'v':
-
+      mShort();
+      mShort();
+      mShort();
+      mLong();
+      
       delay(400);
       break;
 
     // w = s l l 
     case 'w':
-
+      mShort();
+      mLong();
+      mLong();
+      
       delay(400);
       break;
 
     // x = l s s l
     case 'x':
-
+      mLong();
+      mShort();
+      mShort();
+      mLong();
+      
       delay(400);
       break;
 
     // y = l s l l 
     case 'y':
-
+      mLong();
+      mShort();
+      mLong();
+      mLong();
+      
       delay(400);
       break;
 
     // z = l l s s 
     case 'z':
-
+      mLong();
+      mLong();
+      mShort();
+      mShort();
+      
       delay(400);
       break;
 
