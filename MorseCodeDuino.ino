@@ -10,11 +10,11 @@ void setup()
 
 void loop() 
 {
-  // this will be the function that converts the letter to a blink
+  
 
 }
 
-
+// this will be the function that converts the letter to a blink
 void morseCodeGen(char letter)
 {
   switch (letter)
