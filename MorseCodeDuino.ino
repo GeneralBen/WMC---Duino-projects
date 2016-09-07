@@ -54,7 +54,6 @@ void morseCodeGen(char letter)
     // a = s l
     case 'a':
       mShort();
-
       mLong();
       
       delay(400);
@@ -92,6 +91,7 @@ void morseCodeGen(char letter)
     // e = s
     case 'e':
       mShort();
+      
       delay(400);
       break;
 
@@ -101,6 +101,7 @@ void morseCodeGen(char letter)
       mShort();
       mLong();
       mShort();
+      
       delay(400);
       break;
 
@@ -109,6 +110,7 @@ void morseCodeGen(char letter)
       mLong();
       mLong();
       mShort();
+      
       delay(400);
       break;
 
@@ -118,6 +120,7 @@ void morseCodeGen(char letter)
       mShort();
       mShort();
       mShort();
+      
       delay(400);
       break;
 
@@ -125,6 +128,7 @@ void morseCodeGen(char letter)
     case 'i':
       mShort();
       mShort();
+      
       delay(400);
       break;
 
@@ -134,6 +138,7 @@ void morseCodeGen(char letter)
       mLong();
       mLong();
       mLong();
+      
       delay(400);
       break;
 
@@ -142,6 +147,7 @@ void morseCodeGen(char letter)
       mLong();
       mShort();
       mLong();
+      
       delay(400);
       break;
 
@@ -151,6 +157,7 @@ void morseCodeGen(char letter)
       mLong();
       mShort();
       mShort();
+      
       delay(400);
       break;
 
@@ -158,6 +165,7 @@ void morseCodeGen(char letter)
     case 'm':
       mLong();
       mLong();
+      
       delay(400);
       break;
 
@@ -165,6 +173,8 @@ void morseCodeGen(char letter)
     case 'n':
       mLong();
       mShort();
+      
+      delay(400);
       break;
 
     // o = l l l 
