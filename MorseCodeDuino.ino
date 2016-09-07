@@ -22,6 +22,8 @@ void morseCodeGen(char letter)
     // short == s
     // long == l
     
+    
+    // I will do a - m
     // a = s l
     case 'a':
       
