@@ -13,10 +13,23 @@ void setup()
 
 void loop() 
 {
-  String string = "hello world";
+  String myString = "hello world";
+
+  parseString(myString);  
   
   // run the test function
-  testFunction();
+  //testFunction();
+}
+
+// function to parse string
+void parseString(String myString)
+{
+  for(int i = 0; i < myString.length(); i++)
+  {
+    morseCodeGen(myString.charAt(i));
+    Serial.print(myString.charAt(i));
+  }
+  Serial.println("\n");
 }
 
 void testFunction()
