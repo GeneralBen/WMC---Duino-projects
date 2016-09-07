@@ -13,6 +13,8 @@ void setup()
 
 void loop() 
 {
+  String string = "hello world";
+  
   // run the test function
   testFunction();
 }
