@@ -13,8 +13,43 @@ void setup()
 
 void loop() 
 {
-  // this will be the function that converts the letter to a blink
+  // run the test function
+  testFunction();
+}
 
+void testFunction()
+{
+  // this will test the whole alphabet
+
+  morseCodeGen('a');
+  morseCodeGen('b');
+  morseCodeGen('c');
+  morseCodeGen('d');
+  morseCodeGen('e');
+  morseCodeGen('f');
+  morseCodeGen('g');
+  morseCodeGen('h');
+  morseCodeGen('i');
+  morseCodeGen('j');
+  morseCodeGen('k');
+  morseCodeGen('l');
+  morseCodeGen('m');
+  morseCodeGen('n');
+  morseCodeGen('o');
+  morseCodeGen('p');
+  morseCodeGen('q');
+  morseCodeGen('r');
+  morseCodeGen('s');
+  morseCodeGen('t');
+  morseCodeGen('u');
+  morseCodeGen('v');
+  morseCodeGen('w');
+  morseCodeGen('x');
+  morseCodeGen('y');
+  morseCodeGen('z');
+
+  morseCodeGen(' ');
+    
 }
 
 
@@ -38,7 +73,7 @@ void mLong()
     delay(200);
 }
 
-
+// this will be the function that converts the letter to a blink
 void morseCodeGen(char letter)
 {
   switch (letter)
