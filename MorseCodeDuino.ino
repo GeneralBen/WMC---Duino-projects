@@ -72,7 +72,11 @@ void morseCodeGen(char letter)
 
     // c = l s l s
     case 'c':
-
+      mLong();
+      mShort();
+      mLong();
+      mShort();
+      
       delay(400);
       break;
 
