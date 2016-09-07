@@ -26,8 +26,8 @@ void parseString(String myString)
 {
   for(int i = 0; i < myString.length(); i++)
   {
-    morseCodeGen(myString.charAt(i));
     Serial.print(myString.charAt(i));
+    morseCodeGen(myString.charAt(i));
   }
   Serial.println("\n");
 }
