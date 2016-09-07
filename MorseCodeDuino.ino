@@ -91,55 +91,73 @@ void morseCodeGen(char letter)
 
     // e = s
     case 'e':
-
+      mShort();
       delay(400);
       break;
 
     // f = s s l s
     case 'f':
-
+      mShort();
+      mShort();
+      mLong();
+      mShort();
       delay(400);
       break;
 
     // g = l l s
     case 'g':
-
+      mLong();
+      mLong();
+      mShort();
       delay(400);
       break;
 
     // h = s s s s
     case 'h':
-
+      mShort();
+      mShort();
+      mShort();
+      mShort();
       delay(400);
       break;
 
     // i = s s 
     case 'i':
-
+      mShort();
+      mShort();
       delay(400);
       break;
 
     // j = s l l l 
     case 'j':
-
+      mShort();
+      mLong();
+      mLong();
+      mLong();
       delay(400);
       break;
 
     // k = l s l
     case 'k':
-
+      mLong();
+      mShort();
+      mLong();
       delay(400);
       break;
 
     // l = s l s s
     case 'l':
-
+      mShort();
+      mLong();
+      mShort();
+      mShort();
       delay(400);
       break;
 
     // m = l l 
     case 'm':
-
+      mLong();
+      mLong();
       delay(400);
       break;
 
