@@ -29,7 +29,7 @@ void mShort()
 }
 
 // one long period 
-void mlong()
+void mLong()
 {
     digitalWrite(LED, HIGH);
     delay(600);
@@ -55,14 +55,18 @@ void morseCodeGen(char letter)
     case 'a':
       mShort();
 
-      mlong();
+      mLong();
       
       delay(400);
       break;
 
     // b = l s s s  
     case 'b':
-
+      mLong();
+      mShort();
+      mShort();
+      mShort();
+      
       delay(400);
       break;
 
