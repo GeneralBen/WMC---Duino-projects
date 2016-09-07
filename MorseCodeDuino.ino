@@ -13,9 +13,12 @@ void setup()
 
 void loop() 
 {
-  String myString = "hello world";
+  String myString = Serial.readString(); // "hello world";
 
-  parseString(myString);  
+  if(myString.length() > 0)
+  {
+    parseString(myString);  
+  } 
   
   // run the test function
   //testFunction();
@@ -346,7 +349,7 @@ void morseCodeGen(char letter)
 
     
     default:
-      Serial.println("something went wrong -- default found");
+      // Serial.println("something went wrong -- default found");
       break;   
   }
 }
