@@ -347,7 +347,7 @@ void morseCodeGen(char letter)
 
     // space = 4 spaces
     case ' ':
-      delay(80);
+      delay(period * 4);
       break;
 
     
