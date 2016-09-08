@@ -3,25 +3,28 @@
 // a user will give a string (TBD) and the arduino will parse it and output blinks or beeps 
 
 #define LED 13
+
+int period;
 void setup() 
 {
   Serial.begin(9600);
 
   // initialze our LED pin -- pin 13
   pinMode(LED, OUTPUT);
+
+  period = 100;
 }
 
 void loop() 
-{
+{  
   String myString = Serial.readString(); // "hello world";
 
   if(myString.length() > 0)
   {
     parseString(myString);  
-  } 
-  
+  }
   // run the test function
-  //testFunction();
+  // testFunction();
 }
 
 // function to parse string
@@ -75,20 +78,20 @@ void testFunction()
 void mShort()
 {
     digitalWrite(LED, HIGH);
-    delay(200);
+    delay(period);
     
     digitalWrite(LED, LOW);
-    delay(200);
+    delay(period);
 }
 
 // one long period 
 void mLong()
 {
     digitalWrite(LED, HIGH);
-    delay(600);
+    delay(period * 3);
     
     digitalWrite(LED, LOW);
-    delay(200);
+    delay(period);
 }
 
 // this will be the function that converts the letter to a blink
@@ -102,14 +105,14 @@ void morseCodeGen(char letter)
     // long == l = (600 ms)
     // space between periods (200 ms)
     // space between letter (600 ms)
-    // space between word (1400 ms)
+    // space between word (1period * 20 ms)
     
     // a = s l
     case 'a':
       mShort();
       mLong();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // b = l s s s  
@@ -119,7 +122,7 @@ void morseCodeGen(char letter)
       mShort();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // c = l s l s
@@ -129,7 +132,7 @@ void morseCodeGen(char letter)
       mLong();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // d = l s s   
@@ -138,14 +141,14 @@ void morseCodeGen(char letter)
       mShort();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // e = s
     case 'e':
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // f = s s l s
@@ -155,7 +158,7 @@ void morseCodeGen(char letter)
       mLong();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // g = l l s
@@ -164,7 +167,7 @@ void morseCodeGen(char letter)
       mLong();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // h = s s s s
@@ -174,7 +177,7 @@ void morseCodeGen(char letter)
       mShort();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // i = s s 
@@ -182,7 +185,7 @@ void morseCodeGen(char letter)
       mShort();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // j = s l l l 
@@ -192,7 +195,7 @@ void morseCodeGen(char letter)
       mLong();
       mLong();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // k = l s l
@@ -201,7 +204,7 @@ void morseCodeGen(char letter)
       mShort();
       mLong();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // l = s l s s
@@ -211,7 +214,7 @@ void morseCodeGen(char letter)
       mShort();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // m = l l 
@@ -219,7 +222,7 @@ void morseCodeGen(char letter)
       mLong();
       mLong();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // n = l s
@@ -227,7 +230,7 @@ void morseCodeGen(char letter)
       mLong();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // o = l l l 
@@ -236,7 +239,7 @@ void morseCodeGen(char letter)
       mLong();
       mLong();
 
-      delay(400);
+      delay(period * 2);
       break;
 
     // p = s l l s
@@ -246,7 +249,7 @@ void morseCodeGen(char letter)
       mLong();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // q = l l s l 
@@ -256,7 +259,7 @@ void morseCodeGen(char letter)
       mShort();
       mLong();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // r = s l s
@@ -265,7 +268,7 @@ void morseCodeGen(char letter)
       mLong();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // s = s s s
@@ -274,14 +277,14 @@ void morseCodeGen(char letter)
       mShort();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // t = l
     case 't':
       mLong();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // u = s s l
@@ -290,7 +293,7 @@ void morseCodeGen(char letter)
       mShort();
       mLong();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // v = s s s l
@@ -300,7 +303,7 @@ void morseCodeGen(char letter)
       mShort();
       mLong();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // w = s l l 
@@ -309,7 +312,7 @@ void morseCodeGen(char letter)
       mLong();
       mLong();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // x = l s s l
@@ -319,7 +322,7 @@ void morseCodeGen(char letter)
       mShort();
       mLong();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // y = l s l l 
@@ -329,7 +332,7 @@ void morseCodeGen(char letter)
       mLong();
       mLong();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // z = l l s s 
@@ -339,17 +342,18 @@ void morseCodeGen(char letter)
       mShort();
       mShort();
       
-      delay(400);
+      delay(period * 2);
       break;
 
     // space = 4 spaces
     case ' ':
-      delay(800);
+      delay(80);
       break;
 
     
     default:
-      // Serial.println("something went wrong -- default found");
+      //Serial.print(letter);
+      //Serial.println("something went wrong -- default found");
       break;   
   }
 }
